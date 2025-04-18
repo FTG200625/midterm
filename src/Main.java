@@ -36,7 +36,7 @@ public class Main {
 
         System.out.println("--->create playlist: ");
         try {
-            user1.createPlaylist("My playlist", user1);
+            user1.createPlaylist("My playlist");
         }catch (InvalidOperationException e){
             System.out.println(e.getMessage());
         }
@@ -45,7 +45,7 @@ public class Main {
         user1.buyPremium(6);
 
         try {
-            user1.createPlaylist("My playlist", user1);
+            user1.createPlaylist("My playlist");
         }catch (InvalidOperationException e){
             System.out.println(e.getMessage());
         }
