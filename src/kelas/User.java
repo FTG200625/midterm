@@ -37,13 +37,12 @@ public class User {
         if (this.followingList.contains(user)){
             throw new InvalidOperationException("You have already followed this user.");
         }
-        else {
             this.followingList.add(user);
             //user.getFollowerList().add(this);
-        }
+        
     }
-    public void createPlaylist (String title, User owner){
-        this.behavior.createPlaylist(title, owner);
+    public void createPlaylist (String title){
+        this.behavior.createPlaylist(title, this);
     }
     public void playMusic(Music music) {
         this.behavior.playMusic(music);
